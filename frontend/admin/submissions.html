@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pending submissions | Admin</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin checking" data-page="submissions">
+<div class="admin-shell">
+  <aside class="sidebar" id="sidebar" aria-label="Admin menu"></aside>
+  <main class="admin-main">
+    <div class="admin-top">
+      <div style="display:flex;gap:.75rem;align-items:center"><button class="btn btn-ghost btn-sm menu-btn" id="menuBtn" type="button">Menu</button><h1>Pending submissions</h1></div>
+      
+    </div>
+    <section class="panel">
+      <div class="tabs" role="tablist" aria-label="Filter by status">
+        <button type="button" role="tab" data-status="pending" aria-selected="true">Pending</button>
+        <button type="button" role="tab" data-status="approved" aria-selected="false">Approved</button>
+        <button type="button" role="tab" data-status="rejected" aria-selected="false">Rejected</button>
+        <button type="button" role="tab" data-status="all" aria-selected="false">All</button>
+      </div>
+      <div id="submissionsTable"></div>
+    </section>
+    <nav class="pagination" id="submissionsPager" aria-label="Pages"></nav>
+  </main>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

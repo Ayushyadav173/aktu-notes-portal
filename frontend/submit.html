@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit notes | AKTU Notes Portal</title>
+<meta name="description" content="Share your notes with other AKTU students. Submissions are reviewed before they are published.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body data-page="submit" data-nav="submit">
+<a class="sr-only" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <ol class="breadcrumb"><li><a href="/index.html">Home</a></li><li aria-current="page">Submit notes</li></ol>
+    <h1>Submit your notes</h1>
+    <p class="muted">Notes are reviewed by the site owner before they appear publicly.</p>
+  </div>
+</section>
+<div class="container">
+  <div class="form-card">
+    <div id="successBox" class="hidden" tabindex="-1">
+      <p class="alert alert-success" role="status">Your note has been submitted successfully and is waiting for admin approval.</p>
+      <button class="btn btn-ghost" type="button" id="submitAnother">Submit another note</button>
+      <a class="btn btn-primary" href="/browse.html">Browse notes</a>
+    </div>
+    <form id="submitForm" novalidate>
+      <div id="formAlert" role="alert"></div>
+      <div class="form-grid">
+        <div class="field"><label for="studentName">Your name</label><input class="input" id="studentName" name="studentName" maxlength="80" autocomplete="name" required></div>
+        <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" required><span class="hint">Only the site owner sees this.</span></div>
+        <div class="field full"><label for="title">Note title</label><input class="input" id="title" name="title" maxlength="150" placeholder="Example: DBMS Unit 2, Normalization" required></div>
+        <div class="field full"><label for="description">Description</label><textarea id="description" name="description" maxlength="2000" placeholder="What do these notes cover? Are they handwritten or typed?" required></textarea></div>
+        <div class="field"><label for="year">Year</label><select id="year" name="year" required></select></div>
+        <div class="field"><label for="semester">Semester</label><select id="semester" name="semester" required></select></div>
+        <div class="field"><label for="branch">Branch</label><select id="branch" name="branch" required></select></div>
+        <div class="field"><label for="subject">Subject</label><select id="subject" name="subject" required></select></div>
+        <div class="field full"><label for="unit">Unit / topic</label><select id="unit" name="unit" required></select></div>
+        <div class="field full"><label for="tags">Tags (optional)</label><input class="input" id="tags" name="tags" placeholder="sql, joins, normalization"><span class="hint">Separate tags with commas.</span></div>
+        <div class="field full"><label for="file">PDF file</label><input id="file" name="file" type="file" accept="application/pdf,.pdf" required><span class="hint">PDF only, up to 20 MB.</span></div>
+        <div class="field full"><label for="coverImage">Cover image (optional)</label><input id="coverImage" name="coverImage" type="file" accept="image/png,image/jpeg"><span class="hint">JPG or PNG, up to 2 MB.</span></div>
+        <div class="sr-only" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit for review</button>
+    </form>
+  </div>
+</div>
+
+</main>
+<footer id="site-footer"></footer>
+<div id="toasts" aria-live="polite"></div>
+<script src="/js/api.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/submit.js"></script>
+</body>
+</html>

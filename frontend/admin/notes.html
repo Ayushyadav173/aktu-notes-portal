@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes | Admin</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin checking" data-page="notes">
+<div class="admin-shell">
+  <aside class="sidebar" id="sidebar" aria-label="Admin menu"></aside>
+  <main class="admin-main">
+    <div class="admin-top">
+      <div style="display:flex;gap:.75rem;align-items:center"><button class="btn btn-ghost btn-sm menu-btn" id="menuBtn" type="button">Menu</button><h1>Notes</h1></div>
+      <a class="btn btn-primary" href="/admin/add-note.html">Add note</a>
+    </div>
+    <section class="panel">
+      <div class="panel-head">
+        <div class="toolbar">
+          <label class="sr-only" for="noteSearch">Search notes</label>
+          <input class="input" id="noteSearch" type="search" placeholder="Search notes" autocomplete="off">
+          <label class="sr-only" for="statusFilter">Filter by status</label>
+          <select id="statusFilter"><option value="all">All notes</option><option value="approved">Published</option><option value="draft">Drafts</option></select>
+        </div>
+      </div>
+      <div id="notesTable"></div>
+    </section>
+    <nav class="pagination" id="notesPager" aria-label="Pages"></nav>
+  </main>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

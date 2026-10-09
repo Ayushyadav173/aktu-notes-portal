@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes | AKTU Notes Portal</title>
+<meta name="description" content="Search and filter AKTU notes by year, branch, semester, subject and unit.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body data-page="notes" data-nav="browse">
+<a class="sr-only" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <ol class="breadcrumb"><li><a href="/index.html">Home</a></li><li aria-current="page">Notes</li></ol>
+    <h1 id="resultsTitle">All notes</h1>
+    <p class="muted" id="resultsCount" aria-live="polite"></p>
+  </div>
+</section>
+<div class="container layout-sidebar">
+  <aside class="card filters">
+    <form id="filterForm" role="search">
+      <h2>Search and filter</h2>
+      <div class="field"><label for="q">Search</label><input class="input" id="q" name="q" type="search" placeholder="Title, subject or topic" autocomplete="off"></div>
+      <div class="field"><label for="year">Year</label><select id="year" name="year"></select></div>
+      <div class="field"><label for="branch">Branch</label><select id="branch" name="branch"></select></div>
+      <div class="field"><label for="semester">Semester</label><select id="semester" name="semester"></select></div>
+      <div class="field"><label for="subject">Subject</label><select id="subject" name="subject"></select></div>
+      <div class="field"><label for="unit">Unit</label><select id="unit" name="unit"></select></div>
+      <div class="field"><label for="sort">Sort by</label>
+        <select id="sort" name="sort"><option value="latest">Newest first</option><option value="downloads">Most downloaded</option><option value="oldest">Oldest first</option><option value="title">Title A to Z</option></select></div>
+      <button class="btn btn-primary btn-block" type="submit">Search</button>
+      <button class="btn btn-ghost btn-block" type="button" id="clearFilters" style="margin-top:.5rem">Clear filters</button>
+    </form>
+  </aside>
+  <section aria-label="Results">
+    <div class="grid grid-auto" id="results"></div>
+    <nav class="pagination" id="pager" aria-label="Pages"></nav>
+  </section>
+</div>
+
+</main>
+<footer id="site-footer"></footer>
+<div id="toasts" aria-live="polite"></div>
+<script src="/js/api.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/notes.js"></script>
+</body>
+</html>

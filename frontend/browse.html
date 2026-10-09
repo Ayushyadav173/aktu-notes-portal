@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse notes | AKTU Notes Portal</title>
+<meta name="description" content="Browse AKTU notes by year, branch, semester and subject.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body data-page="browse" data-nav="browse">
+<a class="sr-only" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <ol class="breadcrumb" id="crumbs"><li>Home</li></ol>
+    <h1 id="browseTitle">Browse notes</h1>
+    <p class="muted" id="browseSub">Start with your year.</p>
+  </div>
+</section>
+<section class="section"><div class="container" id="browseRoot"></div></section>
+
+</main>
+<footer id="site-footer"></footer>
+<div id="toasts" aria-live="polite"></div>
+<script src="/js/api.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/browse.js"></script>
+</body>
+</html>
